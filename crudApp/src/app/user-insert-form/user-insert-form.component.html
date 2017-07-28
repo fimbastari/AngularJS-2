@@ -1,0 +1,110 @@
+	<div class="form-horizontal">
+		<fieldset>
+			<legend> User info </legend>
+
+			<div class="form-group">
+				<label class="col-md-4 control-label">Name</label>
+				<div class="col-md-6  inputGroupContainer">
+					<div class="input-group">
+						<span class="input-group-addon"><i
+							class="glyphicon glyphicon-user"></i></span> <input [(ngModel)]="name" #ctrl="ngModel" required  placeholder="Name" class="form-control" type="text" >
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-md-4 control-label">Surname</label>
+				<div class="col-md-6  inputGroupContainer">
+					<div class="input-group">
+						<span class="input-group-addon"><i
+							class="glyphicon glyphicon-user"></i></span> <input [(ngModel)]="surname" #ctrl="ngModel" required  placeholder="Surname" class="form-control"
+							type="text" value="">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-md-4 control-label">Username</label>
+				<div class="col-md-6  inputGroupContainer">
+					<div class="input-group">
+						<span class="input-group-addon"><i
+							class="glyphicon glyphicon-user"></i></span> <input [(ngModel)]="username" #ctrl="ngModel" required  placeholder="Username" class="form-control"
+							type="text" value="">
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+					<label class="col-md-4 control-label">Phone</label>
+					<div class="col-md-6  inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span> 
+								<input [(ngModel)]="phone" #ctrl="ngModel" required  placeholder="Phone" class="form-control" type="text" value="">
+						</div>
+					</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-md-4 control-label">Role</label>
+				<div class="col-md-6 selectContainer">
+					<div class="input-group">
+						<span class="input-group-addon"><i
+							class="glyphicon glyphicon-list"></i></span> <select [(ngModel)]="role" #ctrl="ngModel" required  class="form-control selectpicker">
+							<option value="">Select the role</option>
+							<option value=2>Utente semplice</option>
+							<option value=1>Admin</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			
+			<legend> Account information </legend>
+				<div class="form-group">
+					<label class="col-md-4 control-label">E-Mail</label>
+					<div class="col-md-6  inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-envelope"></i></span> <input [(ngModel)]="email" #ctrl="ngModel" required  placeholder="E-Mail Address" class="form-control" type="text" value="">
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-group has-feedback">
+					<label for="password" class="col-md-4 control-label">
+						Password </label>
+					<div class="col-md-6  inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-home"></i></span> <input
+								class="form-control" [(ngModel)]="passw" #ctrl="ngModel" required  type="password"
+								placeholder="Password" value=""/> <span
+								class="glyphicon form-control-feedback"></span> <span
+								class="help-block with-errors"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group has-feedback">
+					<label for="confirmPassword" class="col-md-4 control-label">
+						Confirm Password </label>
+					<div class="col-md-6  inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-home"></i></span> <input
+								class="form-control" [(ngModel)]="confPassw" #ctrl="ngModel" required  type="password"
+								placeholder="Confirm password" 
+								value="" >
+						</div>
+					</div>
+				</div>
+
+
+			<div class="form-group">
+				<label class="col-md-4 control-label"></label>
+				<div class="col-md-4">
+					<button (click)="inviaInfo($event);" class="btn btn-warning"> Send <span class="glyphicon glyphicon-send"></span></button>
+				</div>
+			</div>
+			</fieldset>
+	</div>
